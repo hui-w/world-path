@@ -1,0 +1,124 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: "Lucida Grande", verdana, arial, helvetica, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+div.page-wrapper {
+    margin: 20px;
+    min-width: 500px;
+}
+
+a {
+    text-decoration: none;
+    color: #18C5A3;
+}
+
+a:hover {
+    color: #000;
+}
+
+p {
+    margin: 10px 0px;
+    padding: 0px;
+}
+
+.sub-toolbar {
+    margin: 10px 0px;
+    padding: 10px 0px;
+}
+
+.sub-toolbar a,
+.sub-toolbar input {
+    margin: 0px 10px 0px 0px;
+}
+
+textarea.general-textarea{
+    width: 96%;
+    height: 32px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.red {
+    color: red;
+}
+
+.center {
+    text-align: center;
+}
+
+ul.toolbar {
+    font-size: 120%;
+    padding: 0px 0px 10px 0px;
+    margin: 0px 0px 10px 0px;
+    list-style-type: none;
+    border-bottom: 1px dashed #18C5A3;
+}
+
+ul.toolbar li {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    display: inline;
+    padding: 0px 20px 0px 0px;
+}
+
+div.footer {
+    color: #ccc;
+    padding: 10px 0px 0px 0px;
+    margin: 10px 0px 0px 0px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-width: 1px 0px 0px 1px;
+    border-style: solid;
+    border-color: #ccc;
+}
+
+table th,
+table td {
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: #ccc;
+    padding: 4px;
+}
+
+table.list {
+    width: 100%;
+}
+
+table.list th {
+    font-weight: bold;
+}
+
+table.list td {}
+
+table.detail {
+    width: 100%;
+}
+
+ol.sync-result {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+ol.sync-result li {
+    margin: 0px;
+    padding: 10px 0px;
+    border-bottom: 1px dashed #ccc;
+    line-height: 150%;
+}
