@@ -35,8 +35,7 @@ rm -f $OUT_DIR/temp.combined.js
 rm -f $OUT_DIR/temp.minified.js
 
 echo "Preparing static files..."
-cp $OUT_DIR/index_release.html $DOC_DIR/index.html
-cp $SRC_DIR/ $data-json.js DOC_DIR/data.js
-cp $OUT_DIR/$FILE_NAME $DOC_DIR/$FILE_NAME
+cp $SRC_DIR/index_release.html $OUT_DIR/index.html
+cp $SRC_DIR/data-json.js $OUT_DIR/data.js
 
 echo "Done!"
