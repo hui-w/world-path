@@ -1,0 +1,1 @@
+/* world-path v0.1.0 | https://github.com/hui-w/world-path */
