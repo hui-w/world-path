@@ -46,6 +46,22 @@ var Config = {
     colorIndex: 0
 };
 
+// Should be executed BEFORE any hash change has occurred.
+(function(namespace) { // Closure to protect local variable "var hash"
+    if ('replaceState' in history) { // Yay, supported!
+        namespace.replaceHash = function(newhash) {
+            if ((''+newhash).charAt(0) !== '#') newhash = '#' + newhash;
+            history.replaceState('', '', newhash);
+        }
+    } else {
+        var hash = location.hash;
+        namespace.replaceHash = function(newhash) {
+            if (location.hash !== hash) history.back();
+            location.hash = newhash;
+        };
+    }
+})(window);
+
 var Util = {
     $: function() {
         var elements = new Array();
@@ -82,10 +98,12 @@ var Util = {
             var result = hash.match(new RegExp(pattern, "i"));
             if (result == null || result.length < 1) {
                 //add
-                window.location.hash += "&" + name + "=" + value;
+                // window.location.hash += "&" + name + "=" + value;
+                window.replaceHash(window.location.hash + "&" + name + "=" + value);
             } else {
                 //replace
-                window.location.hash = hash.replace(new RegExp(pattern, "i"), name + "=" + value);
+                // window.location.hash = hash.replace(new RegExp(pattern, "i"), name + "=" + value);
+                window.replaceHash(hash.replace(new RegExp(pattern, "i"), name + "=" + value));
             }
         }
     },
