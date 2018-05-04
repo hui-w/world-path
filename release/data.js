@@ -72,7 +72,8 @@ var mapdata = {
         ["_LAUTERBRUNNEN", "CH", 0000, 00, "46.595373°N, 7.908938°E", "Lauterbrunnen - Schilthorn", 18],
         ["_ZERMATT", "CH", 0000, 00, "46.019657°N, 7.747352°E", "Täsch - Zermatt - Gornergrat", 18],
         ["KIX", "JP", 2016, 05, "34.3829°N, 135.3347°E", "Osaka", 2],
-        ["NGO", "JP", 2016, 05, "35°1′0″N, 136°55′0″E", "Nagoya", 2]
+        ["NGO", "JP", 2016, 05, "35°1′0″N, 136°55′0″E", "Nagoya", 2],
+        ["JFK", "US", 2018, 05, "40°38′23″N 73°46′44″W", "New York", 2]
     ],
     routes: [
         /*US*/
@@ -164,6 +165,11 @@ var mapdata = {
         [
             ["SHA", "YVR", true, -1, "Vancouver, 2017 May"],
             ["YVR", "SHA", true, 1, ""]
+        ],
+
+        [
+            ["SHA", "JFK", true, -1, "US Travel, 2018 May"],
+            ["JFK", "SHA", true, 1, ""]
         ]
     ]
 };
