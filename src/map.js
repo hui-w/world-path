@@ -215,7 +215,7 @@ Map.prototype = {
             //if (item[Consts.CountryIndex] == "US" || item[Consts.CountryIndex] == "CA") {
             //    that.renderPoi(g, item, that.width);
             //}
-            if (item[Consts.KeyIndex] == "ORD" || item[Consts.KeyIndex] == "LAX" || item[Consts.KeyIndex] == "SFO" || item[Consts.KeyIndex] == "YVR") {
+            if (item[Consts.KeyIndex] == "ORD" || item[Consts.KeyIndex] == "LAX" || item[Consts.KeyIndex] == "SFO" || item[Consts.KeyIndex] == "YVR" || item[Consts.KeyIndex] == "JFK") {
                 that.renderPoi(g, item, that.width);
             }
             if (item[Consts.KeyIndex] == "SHA") {

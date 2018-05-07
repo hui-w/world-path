@@ -4,7 +4,8 @@
  * @licence MIT
  */
 
-'use strict';var Consts = {
+'use strict';
+var Consts = {
     KeyIndex: 0,
     CountryIndex: 1,
     LatLonIndex: 4,
@@ -50,7 +51,7 @@ var Config = {
 (function(namespace) { // Closure to protect local variable "var hash"
     if ('replaceState' in history) { // Yay, supported!
         namespace.replaceHash = function(newhash) {
-            if ((''+newhash).charAt(0) !== '#') newhash = '#' + newhash;
+            if (('' + newhash).charAt(0) !== '#') newhash = '#' + newhash;
             history.replaceState('', '', newhash);
         }
     } else {
@@ -96,15 +97,17 @@ var Util = {
         } else {
             var pattern = name + "=([^\&]+)";
             var result = hash.match(new RegExp(pattern, "i"));
+            var newHash = hash;
             if (result == null || result.length < 1) {
-                //add
-                // window.location.hash += "&" + name + "=" + value;
-                window.replaceHash(window.location.hash + "&" + name + "=" + value);
+                newHash = hash + "&" + name + "=" + value;
             } else {
-                //replace
-                // window.location.hash = hash.replace(new RegExp(pattern, "i"), name + "=" + value);
-                window.replaceHash(hash.replace(new RegExp(pattern, "i"), name + "=" + value));
+                newHash = hash.replace(new RegExp(pattern, "i"), name + "=" + value);
             }
+
+            // this will affect browser history
+            // window.replaceHash(newHash);
+
+            history.replaceState(undefined, undefined, newHash)
         }
     },
 
