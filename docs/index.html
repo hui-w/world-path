@@ -11,7 +11,7 @@
     <script type="text/javascript" src="data.js"></script>
     <script language="JavaScript">
     var fullScreen = (Util.getQueryStringByName("fullscreen") != "false");
-    var map = new Map();
+    var map = new WorldMap();
     var frame = new Frame(map, 1000, 400, fullScreen);
 
     function pageLoad() {
@@ -29,7 +29,7 @@
         if (fullScreen) {
             Util.$("linkFullsreen").style.display = "none";
         } else {
-            // new Map().renderInto(document.getElementById("standaloneMap"));
+            // new WorldMap().renderInto(document.getElementById("standaloneMap"));
             Util.$("pageWrapper").style.padding = "6px";
         }
     }
